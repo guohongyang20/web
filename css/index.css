@@ -1,0 +1,571 @@
+/* 全局样式 */
+/* 浏览器默认给一些标签（所有标签）设置了内外边距 */
+*{margin: 0px; padding: 0px;}
+
+/* 去掉页面中所有的 li 的默认样式 小圆点 */
+li{list-style: none;}
+
+/* 去掉页面中所有超链接的下划线 */
+a{text-decoration: none;}
+
+/* img对齐方式设置为底部对齐 */
+img{vertical-align: bottom;}
+
+
+
+/* 头部样式 */
+.header{
+	/* 设置元素宽的属性 */
+	/* 如果不设置宽高，div这个标签，会继承父级的100% */
+	/* width: 300px; */
+	/* 设置高 */
+	height: 64px;
+	
+	/* 设置背景颜色 */
+	background-color: #2E2E2E;
+}
+
+.header-content{
+	width:1200px;
+	height: 64px;
+	/* background: pink; */
+	/* 元素居中 外边距*/
+	margin: 0px auto;
+	
+	/* 设置为flex布局 */
+	display: flex;
+	/* 设置排列方法的对齐方式 */
+	justify-content: space-between;
+}
+
+.logo{
+	width:142px;
+	height: 64px;
+	/* background-color: gray; */
+}
+
+.nav{
+	/* width:400px; */
+	height: 64px;
+	/* background-color: yellowgreen; */
+	/* 设置为flex布局 */
+	display: flex;
+	/* 设置另外一个轴向对齐方式 */
+	align-items: center;
+}
+
+/* 后代选择器 */
+.nav li{
+	/* 设置左右一个外边距为30px */
+	margin: 0px 30px;
+}
+
+.nav li a{
+	/* 设置字体大小 */
+	font-size: 14px;
+	color: white;
+}
+
+.nav .active a{
+	color: orangered;
+}
+
+/* 鼠标移入  元素:hover*/
+.nav li a:hover{
+	color: orangered;
+}
+
+.btn{
+	/* width:300px; */
+	height: 64px;
+	/* background-color: orange; */
+	/* 设置为flex布局 */
+	display: flex;
+	/* 设置另外一个轴向对齐方式 */
+	align-items: center;
+}
+
+/* 并集选择器 都 多个元素共同使用一条或多条样式 */
+.login, .register{
+	width:55px;
+	height: 30px;
+	color: white;
+	font-size: 14px;
+	/* 设置单行文本左右居中 */
+	text-align: center;
+	/* 设置单行文本的上下居中 */
+	line-height: 30px;
+	
+	/* 设置光标的样式 */
+	cursor: pointer;
+}
+
+.login{
+	background-color: #e03f26;
+	/* 设置一个右外边距 */
+	margin-right: 5px;
+	border-radius: 6px 0px 0px 6px;
+}
+
+.register{
+	background-color: #bc3c28;
+	border-radius: 0px 6px 6px 0px;
+}
+
+.login:hover{
+	background-color: #bc3c28;
+}
+.register:hover{
+	background-color: #e03f26;
+}
+
+/* 轮播图 */
+.banner{
+	/* 当页面元素内容宽度大于浏览器（body）宽高，就会出现左右滚动条 */
+	/* 用户体验极差 */
+	
+	/* width:1920px; */
+	
+	height: 450px;
+	/* background: gray; */
+	
+	/* 溢出隐藏 */
+	overflow: hidden;
+	
+	/* 设置子级元素的定位参照，原点 */
+	position: relative;
+	
+}
+
+/* 定位 图片 居中 */
+.banner img{
+	position: absolute;
+	/* left: 300px; */
+	/* 用百分比设置，百分比以父级宽度 */
+	left: 50%;
+	/* 向左移动图片宽度的一半 */
+	margin-left: -960px;
+	top: 0px;
+}
+
+.base-title{
+	width:1200px;
+	height: 90px;
+	/* background-color: yellowgreen; */
+	/* 元素左右居中 */
+	margin: 0px auto;
+	
+	/* 设置文本左右居中 */
+	text-align: center;
+	
+	/* 设置上内边距，把内容往下挤 */
+	padding-top: 70px;
+}
+
+.base-title h1{
+	/* 设置字体不加粗 */
+	font-weight: normal;
+	font-size: 28px;
+	color: #333;
+	line-height: 42px;
+}
+
+.base-title p{
+	/* font-size: 16px; */
+	line-height: 34px;
+	color: #666;
+}
+
+/* 考研的详情 */
+.test{
+	width:1200px;
+	height: 338px;
+	/* background-color: gray; */
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+
+.test div{
+	width:368px;
+	height: 338px;
+	/* background: orange; */
+}
+
+.test div h3{
+	font-size: 18px;
+	color: #333;
+	line-height: 40px;
+}
+.test div p{
+	font-size: 14px;
+	color: #666;
+}
+
+.test-banner{
+	width:1200px;
+	height: 112px;
+	/* background-color: gray; */
+	margin: 0px auto;
+}
+.hos{
+	width:1200px;
+	height: 410px;
+	/* background-color: gray; */
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.hos div{
+	width:580px;
+	height: 410px;
+	border: 1px solid gray;
+	margin: 0 auto;
+	
+}
+.hos div h3{
+	font-size: 18px;
+	color: #333;
+	line-height: 40px;
+	margin: 9px;
+}
+.hos div p{
+	font-size: 14px;
+	color: #666;
+	margin: 9px;
+}
+.hos div img{
+	margin: 9px;
+}
+.co{
+	width:1200px;
+	height: 80px;
+	/* background-color: gray; */
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.co div{
+	position:relative;
+	left:1010px;
+}
+.bian{
+	width: 160px;
+	height: 32px;
+	border-radius: 20px;
+	border: 1px solid red;
+	margin: 30px;
+}
+
+
+.bian p{
+	text-align: center;
+	color: red;
+	line-height: 32px;
+	font-size: 14px;
+}
+.bian img{
+	position:relative;
+	left:10px;
+	top: -1px;
+}
+.gongneng{
+	width: 1200px;
+	height: 150px;
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.zixun{
+	background-color: #e03f26;
+	width: 150px;
+	height: 150px;
+}
+.zixun img{
+	position: relative;
+	top: 30px;
+	left: 60px;
+}
+.zixun h2{
+	position: relative;	
+	top: 45px;
+	text-align: center;
+	color: aliceblue;
+	
+}
+.h2te{
+	position: relative;
+	top: 18px;
+	text-align: center;
+	color: aliceblue;
+}
+
+.righ{
+	width: 1040px;
+	height: 150px;
+	
+	
+}
+.righup{
+	width: 1040px;
+	height: 80px;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.righdo{
+	width: 1040px;
+	height: 70px;
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+	
+}
+.rig1{
+	background-color: aqua;
+	width: 150px;
+	height: 70px;
+}
+.rig2{
+	background-color: palevioletred;
+	width: 150px;
+	height: 70px;
+}
+.rig3{
+	width: 500px;
+	height: 70px;
+	background-color: aqua;
+}
+.rig3 img{
+	position: relative;
+	top: -2px;
+	left: -8px;
+	
+}
+.rig4{
+	width: 210px;
+	height: 70px;
+	background-color: orange;
+}
+.rig5{
+	width: 250px;
+	height: 70px;
+	background-color: #666;
+}
+.rig5 img{
+	position: relative;
+	top: -2px;
+	left: -8px;
+	
+}
+.rig6{
+	width: 190px;
+	height: 70px;
+	background-color: royalblue;
+}
+.rig7{
+	width: 210px;
+	height: 70px;
+	background-color: hotpink;
+}
+.rig8{
+	width: 360px;
+	height: 70px;
+	background-color: blue;
+}
+.rig8 img{
+	position: relative;
+	top: -2px;
+	left: -8px;
+	
+}
+
+.unthee{
+	width: 1200px;
+	height: 237px;
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.unka{
+	width: 237.4px;
+	height: 237px;
+	border: 0.5px solid grey;
+}
+.unka img{
+	position: relative;
+	top: 20px;
+	left: 50px;
+}
+.unka h3{
+	position: relative;
+	top: 22px;
+	text-align: center;
+	color: black;
+	font-style: unset;
+}
+.unka p{
+	position: relative;
+	top: 22px;
+	text-align: center;
+	color: red;
+	font-style: oblique;
+}
+
+
+.unka .qus{
+	position: relative;
+	top: -82px;
+	left: 0px;
+}
+.unka .un{
+	position: relative;
+	
+	left: -22px;
+}
+.too{
+	width: 1200px;
+	height: 620px;
+	margin: 0px auto;
+}
+.por{
+	width: 1200px;
+	height: 412px;
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+	border: 2.5px solid grey;
+}
+
+.guang{
+	width: 320px;
+}
+
+.guang h2{
+	position: relative;
+	top: 50px;
+	text-align: center;
+	color: black;
+	font-style: unset;
+}
+.guang p{
+	position: relative;
+	
+	top: 60px;
+	text-align: left;
+	font-style: oblique;
+	
+}
+
+.imgbian{
+	position: relative;
+	top: 40px;
+	left: 60px;
+	width: 170px;
+	height: 170px;
+	border-radius: 100%;
+	border: 2px solid grey;
+}
+
+.ender{
+	/* 设置元素宽的属性 */
+	/* 如果不设置宽高，div这个标签，会继承父级的100% */
+	/* width: 300px; */
+	/* 设置高 */
+	height: 253px;
+	
+	/* 设置背景颜色 */
+	background-color: #2E2E2E;
+}
+
+.lie{
+	width: 1200px;
+	height: 253px;
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.leee{
+	width: 800px;
+	height: 253px;
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.fu{
+	position: relative;
+	top: 30px;
+	width: 160px;
+	height: 253px;
+	text-align: center;
+}
+
+.fu dl{
+	color: cornsilk;
+	line-height: 52px;
+	
+}
+.fu dt{
+	font-size: 20px;
+}
+
+.riggg{
+	width: 400px;
+	height: 253px;
+	
+}
+.rigggup{
+	width: 400px;
+	height: 150px;
+	
+}
+.rigggup img{
+	position: relative;
+	top: 60px;
+	left: 88px;
+}
+.rigggdo{
+	position: relative;
+	left: 10px;
+	width: 200px;
+	height: 100px;
+	margin: 0px auto;
+	/* 设置为flex布局 */
+	display: flex;
+	justify-content: space-between;
+}
+.rigggdo img{
+	width: 40px;
+	height: 40px;
+}
+
+.mod_copyright {
+        text-align: center;
+        padding-top: 20px;
+		background-color: #333;
+		
+        }
+        
+.links {
+        margin-bottom: 15px;
+        }
+        
+.links a {
+        margin: 0 3px;
+        color: aliceblue;
+		}
+ 
+.copyright {
+        line-height: 20px;
+		color: beige;
+        }
+
